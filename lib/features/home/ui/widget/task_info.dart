@@ -136,50 +136,56 @@ class _TaskInfoState extends State<TaskInfo> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            widget.taskModel.subTitle,
-                            style: TextStyle(
-                              fontWeight: FontWeight.normal,
-                              color: widget.taskModel.isCheck ?? false
-                                  ? const Color.fromARGB(255, 6, 70, 180)
-                                  : Colors.grey,
-                              fontSize: 15.sp,
-                              decoration: widget.taskModel.isCheck ?? false
-                                  ? TextDecoration.lineThrough
-                                  : null,
-                              decorationThickness: 1.8,
-                              decorationColor: widget.taskModel.isCheck ?? false
-                                  ? const Color.fromARGB(255, 19, 96, 158)
-                                  : Colors.black,
+                          Expanded(
+                            child: Text(
+                              widget.taskModel.subTitle,
+                              style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                color: widget.taskModel.isCheck ?? false
+                                    ? const Color.fromARGB(255, 6, 70, 180)
+                                    : Colors.grey,
+                                fontSize: 15.sp,
+                                decoration: widget.taskModel.isCheck ?? false
+                                    ? TextDecoration.lineThrough
+                                    : null,
+                                decorationThickness: 1.8,
+                                decorationColor:
+                                    widget.taskModel.isCheck ?? false
+                                        ? const Color.fromARGB(255, 19, 96, 158)
+                                        : Colors.black,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 3,
                             ),
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 1,
                           ),
-                          Align(
-                            alignment: Alignment.bottomLeft,
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.only(right: 20, top: 20),
-                              child: Column(
-                                children: [
-                                  Text(
-                                    formattedTime,
-                                    style: TextStyle(
-                                      color: widget.taskModel.isCheck ?? false
-                                          ? Colors.white
-                                          : null,
+                          Flexible(
+                            fit: FlexFit.tight,
+                            child: Align(
+                              alignment: Alignment.bottomLeft,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.only(right: 20, top: 20),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      formattedTime,
+                                      style: TextStyle(
+                                        color: widget.taskModel.isCheck ?? false
+                                            ? Colors.white
+                                            : null,
+                                      ),
                                     ),
-                                  ),
-                                  verticalSpace(2),
-                                  Text(
-                                    formattedDate,
-                                    style: TextStyle(
-                                      color: widget.taskModel.isCheck ?? false
-                                          ? Colors.white
-                                          : null,
+                                    verticalSpace(2),
+                                    Text(
+                                      formattedDate,
+                                      style: TextStyle(
+                                        color: widget.taskModel.isCheck ?? false
+                                            ? Colors.white
+                                            : null,
+                                      ),
                                     ),
-                                  )
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ),

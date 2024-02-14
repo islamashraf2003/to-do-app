@@ -6,6 +6,7 @@ import 'package:todo_app/features/home/logic/add_task/add_task_cubit.dart';
 import '../../data/task_data.dart';
 import 'custom_elevated_button.dart';
 import 'custom_text_field.dart';
+import 'title_of_button_sheet.dart';
 
 class AddTaskForm extends StatefulWidget {
   AddTaskForm({
@@ -43,25 +44,7 @@ class _AddTaskFormState extends State<AddTaskForm> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                verticalSpace(60),
-                const Center(
-                  child: Text(
-                    'New Task Todo',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25,
-                    ),
-                  ),
-                ),
-                const Divider(
-                  height: 25,
-                  thickness: .9,
-                  color: Colors.grey,
-                ),
-                const SizedBox(height: 7),
+                const TitleOfButtonSheet(),
                 const Text(
                   'Title Task',
                   maxLines: 1,

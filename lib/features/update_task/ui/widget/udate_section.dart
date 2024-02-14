@@ -20,13 +20,9 @@ class UpdateSection extends StatefulWidget {
 
 class _UpdateSectionState extends State<UpdateSection> {
   String? title, subTitle;
-
   int selectedRadioValue = 0;
-
   final GlobalKey<FormState> formKey = GlobalKey();
-
   Color containerColor = Colors.white;
-
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
 
   @override
@@ -52,7 +48,6 @@ class _UpdateSectionState extends State<UpdateSection> {
                 fontSize: 19,
               ),
             ),
-            const SizedBox(height: 3),
             CutomTextFormFiled(
               hintText: 'Update Task Name',
               maxLines: 1,
@@ -63,7 +58,7 @@ class _UpdateSectionState extends State<UpdateSection> {
                 }
               },
             ),
-            const SizedBox(height: 10),
+            verticalSpace(10),
             const Text(
               'Description',
               maxLines: 1,

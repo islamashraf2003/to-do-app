@@ -18,7 +18,6 @@ class AppBarSection extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
-        verticalSpace(10.h),
         const Padding(
           padding: EdgeInsets.only(left: 80),
           child: Divider(),
@@ -26,24 +25,4 @@ class AppBarSection extends StatelessWidget {
       ],
     );
   }
-
-  // @override
-  // Widget build(BuildContext context) {
-  //   return Column(
-  //     crossAxisAlignment: CrossAxisAlignment.start,
-  //     children: [
-  //       verticalSpace(40),
-  //       Padding(
-  //         padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
-  //         child: const Text(
-  //           "TO Do",
-  //           style: TextStyle(
-  //             fontSize: 40,
-  //             fontWeight: FontWeight.w700,
-  //           ),
-  //         ),
-  //       ),
-  //     ],
-  //   );
-  // }
 }
